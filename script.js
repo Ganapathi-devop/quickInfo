@@ -7,7 +7,18 @@ $( document ).ready(function() {
         $('.login-section').removeClass('d-none')
     }
 
-    $('.login-btn').onClick(()=>{
-        
+    $('.login-btn').click(()=>{
+        var userDetails ={
+            uname: $('#login-input-uname').val(),
+            pass: $('#login-input-pass').val()
+        }
+        var existingUsers = JSON.parse(localStorage.getItem(userDetails.uname));
+        console.log(existingUsers.userName)
+        console.log(existingUsers.userPass)
+        if(userDetails.uname === existingUsers.userName && userDetails.pass === existingUsers.userPass){
+            console.log('logged in')
+        }else{
+            alert("check for pass")
+        }
     });
 });
