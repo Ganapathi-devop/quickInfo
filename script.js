@@ -6,4 +6,8 @@ $( document ).ready(function() {
         $('.preloader-wrapper').addClass('invisible')
         $('.login-section').removeClass('d-none')
     }
+
+    $('.login-btn').onClick(()=>{
+        
+    });
 });

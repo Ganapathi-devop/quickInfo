@@ -1,8 +1,11 @@
+@media only screen and (max-width: 600px) {
+    @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 * {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    overflow: hidden;
 }
 
 .preloader-wrapper {
@@ -142,7 +145,7 @@
 }
 /* styling for user page */
 #user-body{
-    background-image: url(./assets/bg.png);
+    background-color: #272727;
     width: 100vw;
     height: 100vh;
     float: left;
@@ -156,13 +159,14 @@
     align-content: center;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
-    height: 10%;
-    padding: 1%;
+    width: 100%;
+    height: 12%;
+    padding: 1% 4%;
     background-color: #fff;
 }
 #logo-user-header{
     width: 20%;
+    height: auto;
     border-radius: 100%;
 }
 .user-section{
@@ -170,12 +174,72 @@
     height: 100%;
     float: left;
     display: flex;
-
-
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20%;
 }
 .emergencey{
     width: 250px;
     height: 250px;
     border-radius: 100%;
     background-color: #fff;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+#emergencey-txt{
+    display: inline;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2.5rem;
+    font-family: 'Alfa Slab One', cursive;
+}
+.button {
+    background: #ff4a4a;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff4a4a), to(#992727));
+    background: -moz-linear-gradient(top, #ff4a4a, #992727);
+    background: linear-gradient(to bottom, #ff4a4a, #992727);
+    -webkit-box-shadow: #ff5959 0px 0px 40px 0px;
+    -moz-box-shadow: #ff5959 0px 0px 40px 0px;
+    box-shadow: #ff5959 0px 0px 40px 0px;
+    text-shadow: #591717 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:hover,
+.button:focus {
+    background: #ff5959;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff5959), to(#b62f2f));
+    background: -moz-linear-gradient(top, #ff5959, #b62f2f);
+    background: linear-gradient(to bottom, #ff5959, #b62f2f);
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:active {
+    background: #982727;
+    background: -webkit-gradient(linear, left top, left bottom, from(#982727), to(#982727));
+    background: -moz-linear-gradient(top, #982727, #982727);
+    background: linear-gradient(to bottom, #982727, #982727);
+}
+.msg-user-section{
+    font-size: 3rem;
+    color: #272727;
+
+}
+.msg-div-user-section{
+    width: 15%;
+    height: 10%;
+    border-radius: 100%;
+    padding: 1.5% 0%;
+    background-color: #fff;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;}
+
 }
