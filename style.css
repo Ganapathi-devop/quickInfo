@@ -180,7 +180,7 @@
     align-items: center;
     padding-top: 20%;
 }
-.emergencey{
+.emergencey-btn{
     width: 250px;
     height: 250px;
     border-radius: 100%;
@@ -231,7 +231,7 @@
     color: #272727;
 
 }
-.msg-div-user-section{
+.msg-btn-user-section{
     width: 15%;
     height: 10%;
     border-radius: 100%;
