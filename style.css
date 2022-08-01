@@ -243,6 +243,28 @@
     align-items: center;}
 
 }
+.three-dot-menu{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 65%;
+    height: 34%;
+    padding: 10%;
+    align-self: center;
+    vertical-align: middle;
+    background-color: #fff;
+    background: rgba(255, 255, 255, 0.46);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(235, 65, 65, 0.48);
+    z-index: 1;
+}
+.three-dot-menu-links{
+    padding: 2%;
+    font-size: 1.5rem;
+}
 /* signup page styling */
 #signup-body{
     background-color: #272727;

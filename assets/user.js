@@ -6,12 +6,15 @@ $(document).ready(
         const emailApiKey = "CF99C4FBE74E30C60BC8A3A3849CB136A7A72661864C6E3BD615C8AB83E02D9D7757E35225CF47D23E1FD7A8D4A11F91";
         
         async function sendingEmail(infos, result){
+            // function to send email from user to admin via elaticemail
+            // info is a obj with all the information needed & loc consist of the place address that converts from getLocFromApi
             var loc = result;
             const response = await fetch(`https://api.elasticemail.com/v2/email/send?apikey=${emailApiKey}&from=${infos.userDetails.userEmail}&fromName=${infos.userDetails.userName}&to=${adminEmail}&body=${infos.bodyText + " " + loc}&subject=${infos.subject}`)
             let status = response.json();
             console.log(status)
         }
         async function getLocFromApi(infos){
+            // function to convert coords of user to readable address 
             const retrived = await fetch(`https://us1.locationiq.com/v1/reverse?key=pk.68b2156c752a365c5c8694ca96ab81b7&lat=${infos.userLocation.lat}&lon=${infos.userLocation.long}&format=json`).then((data) => data.json()).catch((error) => console.log(error))
             var result = retrived.display_name;
             sendingEmail(infos, result)
@@ -22,6 +25,7 @@ $(document).ready(
                 long: por.coords.longitude,
                 time: moment(por.coords.timestamp).format('MMMM Do YYYY, h:mm:ss a')
             }
+            // localStorage has the sign up details of all users which can be get by the user name
             var userDetails = JSON.parse(localStorage.getItem(userName));
             var infos = {
                 userLocation,
@@ -35,6 +39,16 @@ $(document).ready(
         $('.emergencey-btn').click(
             ()=>{
                 const userLoc = navigator.geolocation.getCurrentPosition(getLocFromNav);
+            }
+        );
+
+        // function for three dot btn
+        $('.three-dot-btn').click(
+            ()=>{
+                $('.three-dot-menu').toggle(
+                    ()=>{$('.three-dot-menu').removeClass('d-none')},
+                    ()=>{$('.three-dot-menu').addClass('d-none')}
+                )
             }
         );
     }
