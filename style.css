@@ -1,5 +1,7 @@
 @media only screen and (max-width: 600px) {
     @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 * {
     margin: 0%;
     padding: 0%;
@@ -262,8 +264,16 @@
     z-index: 1;
 }
 .three-dot-menu-links{
+    width: 100%;
     padding: 2%;
-    font-size: 1.5rem;
+    font-size: 135%;
+    font-weight: 600;
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: #FFFF00;
+}
+#editDetails-user{
+    text-decoration: none;
+    color: inherit;
 }
 /* signup page styling */
 #signup-body{
@@ -309,4 +319,65 @@
 #logo-signup{
     width: 80%;
 
+}
+/* styling for editDetails */
+.editDetails-div{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: #33eeff;
+    text-align: justify;
+}
+.editDetails-section{
+    width: 100%;
+    height: inherit;
+    display: flex;    
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 15%;
+}
+/* styling for admin page */
+.admin-section {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "."
+        "."
+        ".";
+    align-items: center;
+    justify-content: space-around;
+    justify-items: center;
+}
+.no-of-user-div, .btnClicked-div{
+    width: 60%;
+    height: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    border-radius: 5%;
+    border: 1px solid #ff4a4a;
+}
+.no-of-user-h1, .btnClicked{
+    color: #272727;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.btnClicked-div{
+    width: 60%;
+    height: 50%;
+}
+#admin-edit{
+    color: #33eeff;
 }

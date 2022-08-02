@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="./assets/qi.png">
+    <meta name="Description" content="Enter your description here"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>QuickInfo-editDetails</title>
+    </head>
+<body id="user-body">
+    <header class="row">
+        <div class="user-header">
+            <img src="./qi.png" alt="logo" srcset="" id="logo-user-header">
+            <h4 id="header-name">Quick Info</h4>
+            <span class="material-symbols-outlined three-dot-btn invisible">
+                <img src="./threeDot.png" alt="three dot btn" srcset="">
+            </span>
+        </div>
+        
+    </header>
+    <section class="editDetails-section">
+        <div class="editDetails-div">
+            <h4 class="text-bolder">
+                Edit The Details
+            </h4>
+            <div class="uname-editDetails m-2">
+                <label for="username">User Name:</label>
+                <input type="text" name="username" class="m-2" id="username-editDetails">
+            </div>
+            <div class="pass-editDetails m-2">
+                <label for="password">Password:</label>
+                <input type="password" name="password" class="m-2" id="password-editDetails">
+                <br>
+                <input type="checkbox" name="pass-visible-toggle" id="checkbox-editDetails">
+                <label for="pass-visible-toggle">view pass</label>
+            </div>        
+            <div class="email-editDetails m-2">
+                <label for="email">Email:</label>
+                <input type="email" name="email" class="m-2" id="email-editDetails">
+            </div>
+            <button class="btn btn-warning" id="submit-btn-editDetails">Submit</button>
+        </div>
+    </section>
+    
+    
+</body>
+<script src="./editDetails.js"></script>
+</html>

@@ -4,6 +4,7 @@ $(document).ready(
         var userName = searchParams.get('username')
         const adminEmail = "cmdinesh03@gmail.com"
         const emailApiKey = "CF99C4FBE74E30C60BC8A3A3849CB136A7A72661864C6E3BD615C8AB83E02D9D7757E35225CF47D23E1FD7A8D4A11F91";
+        var btnClicked = JSON.parse(localStorage.getItem("btnClicked"));
         
         async function sendingEmail(infos, result){
             // function to send email from user to admin via elaticemail
@@ -39,18 +40,29 @@ $(document).ready(
         $('.emergencey-btn').click(
             ()=>{
                 const userLoc = navigator.geolocation.getCurrentPosition(getLocFromNav);
+                // no of time emergency-btn clicked was stored and can be used at admin side
+                btnClicked += 1;
+                localStorage.setItem("btnClicked", btnClicked)
             }
         );
 
         // function for three dot btn
         $('.three-dot-btn').click(
             ()=>{
-                $('.three-dot-menu').toggle(
-                    ()=>{$('.three-dot-menu').removeClass('d-none')},
-                    ()=>{$('.three-dot-menu').addClass('d-none')}
-                )
+                console.log($('.three-dot-menu').hasClass('.d-none'))
+                if($('.three-dot-menu').hasClass('d-none')){
+                    $('.three-dot-menu').removeClass('d-none');
+                }else{
+                    $('.three-dot-menu').addClass('d-none');
+                }
             }
         );
+        $('#editDetails-user').attr("href", `./editDetails.html?username=${userName}`)
+        $('#logout-user').click(
+            ()=>{
+                location.href = '../index.html'
+            }
+        )
     }
 );
 
