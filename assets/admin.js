@@ -1,7 +1,8 @@
 $(document).ready(
     ()=>{ 
-        
-        var adminDetails = JSON.parse(localStorage.getItem("adminDetails"));
+        let searchParams = new URLSearchParams(window.location.search)
+        const admin = searchParams.get('admin');
+        var adminDetails = JSON.parse(localStorage.getItem(admin));        
         console.log(adminDetails)
         $('#editDetails-user').attr("href", `./editDetails.html?admin=${adminDetails.adminName}`)
         console.log(localStorage.getItem("btnClicked"));
@@ -20,12 +21,6 @@ $(document).ready(
                     $('.three-dot-menu').addClass('d-none');
                 }
                
-            }
-        );
-        
-        $('#logout-user').click(
-            ()=>{
-                location.href = '../index.html'
             }
         );
     }

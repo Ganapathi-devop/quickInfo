@@ -58,11 +58,6 @@ $(document).ready(
             }
         );
         $('#editDetails-user').attr("href", `./editDetails.html?username=${userName}`)
-        $('#logout-user').click(
-            ()=>{
-                location.href = '../index.html'
-            }
-        )
     }
 );
 

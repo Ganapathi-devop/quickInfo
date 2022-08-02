@@ -53,7 +53,7 @@ $(document).ready(
                 }
                 localStorage.removeItem(adminDetails.adminName);
                 localStorage.setItem(`${editedAdminDetails.adminName}`, JSON.stringify(editedAdminDetails))                
-                location.href = `./user.html?username=${editedAdminDetails.adminName}`
+                location.href = `./admin.html?admin=${editedAdminDetails.adminName}`
                 console.log(localStorage.getItem(editedAdminDetails.adminName))
                 console.log(localStorage.getItem(adminDetails.adminName))
              }

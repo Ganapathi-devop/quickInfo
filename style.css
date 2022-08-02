@@ -381,4 +381,5 @@
 .admin-txt{
     color: #272727;
     cursor: pointer;
+    text-decoration: none;
 }
