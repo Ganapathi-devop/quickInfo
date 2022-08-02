@@ -378,6 +378,7 @@
     width: 60%;
     height: 50%;
 }
-#admin-edit{
-    color: #33eeff;
+.admin-txt{
+    color: #272727;
+    cursor: pointer;
 }

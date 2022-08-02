@@ -9,7 +9,7 @@ $(document).ready(
                 }
             }
         )
-       if(window.location.href.indexOf("franky") > -1){
+       if(window.location.href.indexOf("username") > -1){
         let searchParams = new URLSearchParams(window.location.search)
         const userName = searchParams.get('username')
         console.log(userName)
